@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>홈</title>
+</head>
+<body>
+    <h1>포켓몬 도감</h1>
+    <div id="poke-list">
+        <div class="item">
+            <img src="https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/000101.png" alt="이상해씨">
+            <div class="info">
+                <h3>이름: 이상해씨</h3>
+                <p>타입: 풀</p>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+    //  불러온 정보 li에 대입
+    // const id2 = req.params.id;
+    const imgEl = document.querySelector('.poke-img');
+    const nameEl = document.querySelector('.poke-name');
+    const descEl = document.querySelector('.poke-desc');
+    //const name = data.pokemons[0];
+    //const desc = data.pokemons[0];
+
+        fetch('http://localhost:3001/api/all')
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+        })
+
+
+
+    </script>
+</body>
+</html>
